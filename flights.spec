@@ -91,4 +91,22 @@ Parameters:
 			[!FDayselected]
 		[else]
 			[FDayselected]
-		
+
+	Delta Only:
+		selected. 	[property DOselected]
+		not selected.
+
+	Delta Partner Airlines:
+		selected. 	[property DPAselected]
+		not selected.
+
+ 	DO or DPA:
+		[if DOselected]
+			[!DPAselected]
+		[else]
+			[DPAselected]
+		[if DPAselected]
+			[!DOselected]
+		[else]
+			[DOselected]
+
