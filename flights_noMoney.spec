@@ -29,7 +29,6 @@ Parameters:
 		Main Cabin T (or higher). 
 
 	MEETING EVENT CODE:
-		Pattern size:		
-			empty. [error]
-			[if Pattern size != 5] [error] 				
-			5. 
+		[if !5] 	[property invalid]
+		[else]		[property valid]
+		

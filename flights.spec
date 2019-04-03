@@ -38,6 +38,16 @@ Parameters:
 		selected. 	[if Money] [property FCselected]
 		not selected. 	[if Money] [if BFselected]
 	
+	BF or CF:
+		[if BFselected]
+			[!CFselected]
+		[else]
+			[CFselected]
+		[if CFselected]
+			[!BFselected]
+		[else]
+			[BFselected]
+	
 	Options Fare Class:
 		Basic Economy E (or higher).  [if FCselected]
 		Main Cabin V (or higher).     [if FCselected]
@@ -52,4 +62,22 @@ Parameters:
 		First Class	[if BFselected]
 		Premium Select	[if BFselected]
 		Delta One	[if BFselected]
-	
+
+	Flexible Dates:
+		selected. 	[property FDselected]	
+		not selected. 
+
+	Options Flexible Dates:
+		Flexible Days. [if FDselected] [FDayselected]
+		5 Weeks.       [if FDselected] [5Wselected]
+
+	FDay or 5W:
+		[if FDayselected]
+			[!5Wselected]
+		[else]
+			[5Wselected]
+		[if 5Wselected]
+			[!FDayselected]
+		[else]
+			[FDayselected]
+		
