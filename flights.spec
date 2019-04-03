@@ -23,25 +23,25 @@ Parameters:
                 not selected.   [if Money]
 
 	Show Best Fares For: 
-		selected. 
+		selected.	[property BFselected] 
 		not selected. 
 
 	Fare Class:
-		selected. 	[if Money] [property selected]
+		selected. 	[if Money] [property FCselected]
 		not selected. 	[if Money]
 	
 	Fare Class:
-		Basic Economy E (or higher).
-		Main Cabin V (or higher).
-		Main Cabin X (or higher). 
-		Main Cabin T (or higher). 
+		Basic Economy E (or higher).  [if FCselected]
+		Main Cabin V (or higher).     [if FCselected]
+		Main Cabin X (or higher).     [if FCselected]
+		Main Cabin T (or higher).     [if FCselected]
 
 	
 	Options Show Best Fares For:
-		Basic Economy. 	[if selected]
-	 	Main Cabin. 	[if selected]
-		Delta comfort+	[if selected]
-		First Class	[if selected]
-		Premium Select	[if selected]
-		Delta One	[if selected]
+		Basic Economy. 	[if BFselected]
+	 	Main Cabin. 	[if BFselected]
+		Delta comfort+	[if BFselected]
+		First Class	[if BFselected]
+		Premium Select	[if BFselected]
+		Delta One	[if BFselected]
 	
