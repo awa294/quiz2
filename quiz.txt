@@ -16,6 +16,15 @@ Show Best Fares is an option for money and miles so it doesn't need an "if" cons
 	Fare Class:
 		selected. 	[if Money] [property FCselected]
 		not selected. 	[if Money] [if BFselected]
+	BF or CF:
+		[if BFselected]
+			[!CFselected]
+		[else]
+			[CFselected]
+		[if CFselected]
+			[!BFselected]
+		[else]
+			[BFselected]
 	Options Fare Class:
 		Basic Economy E (or higher).  [if FCselected]
 		Main Cabin V (or higher).     [if FCselected]
@@ -33,6 +42,21 @@ Show Best Fares is an option for money and miles so it doesn't need an "if" cons
 toggles. How can you reflect this in the TSL specification?
 This was done similarly to the starter code for "pay in money" vs "pay in miles".  The mutually exclusive part for "flexible days" vs. 
 "5 week" options was done similary to question 2. 
+	Flexible Dates:
+		selected. 	[property FDselected]	
+		not selected. 
+	Options Flexible Dates:
+		Flexible Days. [if FDselected] [FDayselected]
+		5 Weeks.       [if FDselected] [5Wselected]
+	FDay or 5W:
+		[if FDayselected]
+			[!5Wselected]
+		[else]
+			[5Wselected]
+		[if 5Wselected]
+			[!FDayselected]
+		[else]
+			[FDayselected]
 
 4. When the Show Price In checkbox is changed from Money to Miles, how does
 the form change? How may you reflect this in the TSL?
