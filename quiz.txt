@@ -15,8 +15,8 @@ Show Best Fares is an option for money and miles so it doesn't need an "if" cons
 		not selected. 
 	Fare Class:
 		selected. 	[if Money] [property FCselected]
-		not selected. 	[if Money]
-	Fare Class:
+		not selected. 	[if Money] [if BFselected]
+	Options Fare Class:
 		Basic Economy E (or higher).  [if FCselected]
 		Main Cabin V (or higher).     [if FCselected]
 		Main Cabin X (or higher).     [if FCselected]
