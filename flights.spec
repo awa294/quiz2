@@ -30,7 +30,7 @@ Parameters:
 		selected. 	[if Money] [property FCselected]
 		not selected. 	[if Money]
 	
-	Fare Class:
+	Options Fare Class:
 		Basic Economy E (or higher).  [if FCselected]
 		Main Cabin V (or higher).     [if FCselected]
 		Main Cabin X (or higher).     [if FCselected]
