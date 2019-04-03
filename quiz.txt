@@ -1,0 +1,14 @@
+1. The meeting event code field is optional. Try setting a value into the field and
+see what results when you perform a search (specify a departure and arrival
+date before doing this.) How can you handle this field in TSL? (Hint: a clue is
+given within the help link associated with this field.)
+
+2. Notice that the Show Best Fares For checkbox and the Fare Class checkbox
+are mutually exclusive. How can you use the [property] and [if] features of
+the TSL specification language to reflect this?
+
+3. Notice that the “Flexible Dates” box, when checked, exposes two other
+toggles. How can you reflect this in the TSL specification?
+
+4. When the Show Price In checkbox is changed from Money to Miles, how does
+the form change? How may you reflect this in the TSL?
