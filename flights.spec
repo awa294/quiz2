@@ -36,7 +36,7 @@ Parameters:
 
 	Fare Class:
 		selected. 	[if Money] [property FCselected]
-		not selected. 	[if Money]
+		not selected. 	[if Money] [if BFselected]
 	
 	Options Fare Class:
 		Basic Economy E (or higher).  [if FCselected]
