@@ -9,8 +9,25 @@ the TSL specification language to reflect this?
 
 The Fare Class can only be selected if "pay in money" is selected, so it has the constraint [if Money] assigned to both options.  
 If it is selected, it is given a property FCselected, which is used for the drop down options for the different fare classes.  
-Show Best Fares is an option for money and miles so it doesn't need an "if" constraint.  If selected, it is given the property BFselected, 
-this is used as a constraint for that option's drop down menu. 
+Show Best Fares is an option for money and miles so it doesn't need an "if" constraint.  If selected, it is given the property BFselected, this is used as a constraint for that option's drop down menu. Code shown below:
+	Show Best Fares For: 
+		selected.	[property BFselected] 
+		not selected. 
+	Fare Class:
+		selected. 	[if Money] [property FCselected]
+		not selected. 	[if Money]
+	Fare Class:
+		Basic Economy E (or higher).  [if FCselected]
+		Main Cabin V (or higher).     [if FCselected]
+		Main Cabin X (or higher).     [if FCselected]
+		Main Cabin T (or higher).     [if FCselected]
+	Options Show Best Fares For:
+		Basic Economy. 	[if BFselected]
+	 	Main Cabin. 	[if BFselected]
+		Delta comfort+	[if BFselected]
+		First Class	[if BFselected]
+		Premium Select	[if BFselected]
+		Delta One	[if BFselected]
 
 3. Notice that the “Flexible Dates” box, when checked, exposes two other
 toggles. How can you reflect this in the TSL specification?
