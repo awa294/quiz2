@@ -7,6 +7,11 @@ given within the help link associated with this field.)
 are mutually exclusive. How can you use the [property] and [if] features of
 the TSL specification language to reflect this?
 
+The Fare Class can only be selected if "pay in money" is selected, so it has the constraint [if Money] assigned to both options.  
+If it is selected, it is given a property FCselected, which is used for the drop down options for the different fare classes.  
+Show Best Fares is an option for money and miles so it doesn't need an "if" constraint.  If selected, it is given the property BFselected, 
+this is used as a constraint for that option's drop down menu. 
+
 3. Notice that the “Flexible Dates” box, when checked, exposes two other
 toggles. How can you reflect this in the TSL specification?
 
