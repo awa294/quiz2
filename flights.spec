@@ -22,6 +22,14 @@ Parameters:
                 selected.       [if Money]
                 not selected.   [if Money]
 
+	MEETING EVENT CODE:
+		acd34. 		
+		abcde. 		
+		12345. 
+		1. 		[error]
+		123456. 	[error]
+		abcdefg. 	[error]	
+
 	Show Best Fares For: 
 		selected.	[property BFselected] 
 		not selected. 
