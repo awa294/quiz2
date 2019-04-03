@@ -1,0 +1,45 @@
+
+This directory contains materials related to the TSL tool.
+
+
+If you're on the cse.unl.edu, you should only need the following
+
+README             - this file
+
+tsl-tool-spec.txt  - a document describing this tool, its usage, and
+                     its expected input syntax
+
+findspec           - replicates the "FIND" TSL spec from Ostrand & Balcer
+
+findspec.tsl       - output of the tsl tool on "findspec"
+
+tsl                - the tsl executeable, built on cse
+
+
+you *should* be able to run tsl on the example TSL spec by typing
+
+    tsl findspec
+
+and that should produce a new copy of "findspec.tsl"
+(This assumes that your current directory is in your search path for binaries,
+else instead of just tsl, use a complete path specification).
+
+
+
+
+
+If you do need to rebuild tsl, you'll need the following. 
+
+
+Makefile      - make tsl builds tsl using the following files, with
+                object files placed in "objs"
+
+debug.c
+defines.h
+input.c
+main.c
+maindefs.h
+output.c
+structs.h
+objs/
+
