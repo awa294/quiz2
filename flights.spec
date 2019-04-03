@@ -3,7 +3,18 @@ Parameters:
                 show in money. [property Money]
                 show in miles. [property Miles]
 
-        From:
+        Money or Miles: 
+		[if Money]
+			[!Miles]
+		[else]
+			[Miles]
+		[if Miles]
+			[!Money]
+		[else]
+			[Money]
+	
+
+	From:
                 LEX.
                 SDF.
                 invalid departure.        [error]
