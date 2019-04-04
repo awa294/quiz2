@@ -1,4 +1,4 @@
-Using the TSL tool, flights.spec generated 20097 test frames written to flights.spec.tsl.
+Using the TSL tool, flights.spec generated 175 test frames written to flights.spec.tsl.
 
 1. The meeting event code field is optional. Try setting a value into the field and
 see what results when you perform a search (specify a departure and arrival
