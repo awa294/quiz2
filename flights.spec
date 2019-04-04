@@ -1,7 +1,7 @@
 Parameters:
         Payment:
-                show in money. [property Money]
-                show in miles. [property Miles]
+                show in money. [property Money] 
+                show in miles. [property Miles] 
 
         Money or Miles: 
 		[if Money]
@@ -15,28 +15,28 @@ Parameters:
 	
 
 	From:
-                LEX.
-                SDF.
+                LEX.			  [single]
+                SDF.		          [single]
                 invalid departure.        [error]
 
         To:
-                DAB.
-                EWR.
-                ATL.
+                DAB.			[single]
+                EWR.			[single]
+                ATL.			[single]
                 invalid arrival.        [error]
 
         Number of Passengers:
-                10.          
+                10.          	[single]
 		0.		[error]
 
         Refundable Flights:
-                selected.       [if Money]
-                not selected.   [if Money]
+                selected.       [if Money] [single]
+                not selected.   [if Money] [single]
 
 	MEETING EVENT CODE:
-		acd34. 		
-		abcde. 		
-		12345. 
+		acd34. 		[single]
+		abcde. 		[single]
+		12345. 		[single]
 		1. 		[error]
 		123456. 	[error]
 		abcdefg. 	[error]	
@@ -50,11 +50,11 @@ Parameters:
 		not selected. 	[if Money] [if BFselected]
 	
 	BF or CF:
-		[if BFselected]
+		[if BFselected]  
 			[!CFselected]
 		[else]
 			[CFselected]
-		[if CFselected]
+		[if CFselected]  
 			[!BFselected]
 		[else]
 			[BFselected]
@@ -67,15 +67,15 @@ Parameters:
 
 	
 	Options Show Best Fares For:
-		Basic Economy. 	[if BFselected]
-	 	Main Cabin. 	[if BFselected]
-		Delta comfort+	[if BFselected]
-		First Class	[if BFselected]
-		Premium Select	[if BFselected]
-		Delta One	[if BFselected]
+		Basic Economy. 	[if BFselected]	
+	 	Main Cabin. 	[if BFselected] 
+		Delta comfort+	[if BFselected] 
+		First Class	[if BFselected] 
+		Premium Select	[if BFselected] 
+		Delta One	[if BFselected] 
 
 	Flexible Dates:
-		selected. 	[property FDselected]	
+		selected. 	[property FDselected] 	
 		not selected. 
 
 	Options Flexible Dates:
@@ -93,11 +93,11 @@ Parameters:
 			[FDayselected]
 
 	Delta Only:
-		selected. 	[property DOselected]
+		selected. 	[property DOselected] [single]
 		not selected.
 
 	Delta Partner Airlines:
-		selected. 	[property DPAselected]
+		selected. 	[property DPAselected] [single]
 		not selected.
 
  	DO or DPA:
@@ -113,7 +113,7 @@ Parameters:
 	Dates:
 		04/13/2019-04/03/2019. [error]
 		05/03/2019-05/03/2019. 
-		06/03/2019-06/03/2019. 
+		06/03/2019-06/03/2019.  
 		04/03/2020-04/03/2020. 
 		52/1/2030-1/4/2019.    [error]
 		d/m/y-dd/mm/yy.        [error]
