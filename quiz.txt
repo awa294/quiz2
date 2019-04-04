@@ -3,60 +3,27 @@ see what results when you perform a search (specify a departure and arrival
 date before doing this.) How can you handle this field in TSL? (Hint: a clue is
 given within the help link associated with this field.)
 
+Test frames were made for 3 valid meeting event codes (5 character alphanumeric), and 3 for invalid ones that would return an error. 
+
 2. Notice that the Show Best Fares For checkbox and the Fare Class checkbox
 are mutually exclusive. How can you use the [property] and [if] features of
 the TSL specification language to reflect this?
 
 The Fare Class can only be selected if "pay in money" is selected, so it has the constraint [if Money] assigned to both options.  
 If it is selected, it is given a property FCselected, which is used for the drop down options for the different fare classes.  
-Show Best Fares is an option for money and miles so it doesn't need an "if" constraint.  If selected, it is given the property BFselected, this is used as a constraint for that option's drop down menu. Code shown below:
-	Show Best Fares For: 
-		selected.	[property BFselected] 
-		not selected. 
-	Fare Class:
-		selected. 	[if Money] [property FCselected]
-		not selected. 	[if Money] [if BFselected]
-	BF or CF:
-		[if BFselected]
-			[!CFselected]
-		[else]
-			[CFselected]
-		[if CFselected]
-			[!BFselected]
-		[else]
-			[BFselected]
-	Options Fare Class:
-		Basic Economy E (or higher).  [if FCselected]
-		Main Cabin V (or higher).     [if FCselected]
-		Main Cabin X (or higher).     [if FCselected]
-		Main Cabin T (or higher).     [if FCselected]
-	Options Show Best Fares For:
-		Basic Economy. 	[if BFselected]
-	 	Main Cabin. 	[if BFselected]
-		Delta comfort+	[if BFselected]
-		First Class	[if BFselected]
-		Premium Select	[if BFselected]
-		Delta One	[if BFselected]
+Show Best Fares is an option for money and miles so it doesn't need an "if" constraint.  If selected, it is given the property BFselected, this is used as a constraint for that option's drop down menu.
 
 3. Notice that the “Flexible Dates” box, when checked, exposes two other
 toggles. How can you reflect this in the TSL specification?
+
 This was done similarly to the starter code for "pay in money" vs "pay in miles".  The mutually exclusive part for "flexible days" vs. 
 "5 week" options was done similary to question 2. 
-	Flexible Dates:
-		selected. 	[property FDselected]	
-		not selected. 
-	Options Flexible Dates:
-		Flexible Days. [if FDselected] [FDayselected]
-		5 Weeks.       [if FDselected] [5Wselected]
-	FDay or 5W:
-		[if FDayselected]
-			[!5Wselected]
-		[else]
-			[5Wselected]
-		[if 5Wselected]
-			[!FDayselected]
-		[else]
-			[FDayselected]
+
 
 4. When the Show Price In checkbox is changed from Money to Miles, how does
 the form change? How may you reflect this in the TSL?
+
+The [if Money] was already implemented for parts of the source code, so the Miles property was implemented for test specifications for 
+using miles for "delta only" flights, or for "delta partner airlines". The Money property was implemented already for question 2 because having money selected opened options for fare class and best fare. 
+
+
